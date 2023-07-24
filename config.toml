@@ -1,4 +1,4 @@
-baseURL = 'https://wiki.saitkotika.ru/'
+baseURL = 'https://darpru.github.io/wiki/'
 languageCode = 'en'
 defaultContentLanguage = "en"
 disableHugoGeneratorInject = true
