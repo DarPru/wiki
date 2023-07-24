@@ -1,0 +1,13 @@
+{{$i := 0}}{{ range $elem_index, $elem_val := $.Site.RegularPages -}}{{$i = $elem_index}}{{end}}
+{
+	"items" : [
+	{{ range $elem_index, $elem_val := $.Site.RegularPages }}
+		{
+		  "url": "{{ .Permalink }}",
+		  "title": "{{ .Params.h1 }}",
+		  "img": "{{ .Params.image }}",
+		  "content": {{ .Content | plainify | jsonify }}
+		} {{if not (eq $elem_index $i)}},{{end}}
+	{{end}}
+	]
+}

@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{{partial "head/autometa.html"}}
+<title>{{$.Scratch.Get "title"}}</title>
+{{partial "head/alternate.html"}}
+{{partial "head/seo.html"}}
+{{partial "head/schema.html"}}
+{{partial "head/favs.html"}}
+{{- if .Paginator -}}
+{{- if .Paginator.HasPrev -}}
+<link rel="prev" href="{{ .Paginator.Prev.URL | absURL }}">
+{{- end -}}
+{{- if .Paginator.HasNext -}}
+<link rel="next" href="{{ .Paginator.Next.URL | absURL }}">
+{{- end -}}
+{{- end -}}
+{{$paginate := false}}
+{{- with .Paginator -}} 
+{{- $paginate = ne .PageNumber 1 -}}
+{{- end -}}
+{{- if or (or .Page.Params.noindex $.Site.Params.noindex) ($paginate) -}}
+<meta name='robots' content='noindex, nofollow' />
+{{- else -}}
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+{{- end -}}
+{{range .Site.Params.styles}}
+<link rel="stylesheet" href="{{ . | absURL}}">
+{{end}}
+{{range .Site.Params.fonts}}
+<link rel="preload" href="{{ . | absURL}}" as="font" crossorigin="anonymous">
+{{end}}

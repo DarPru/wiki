@@ -1,0 +1,13 @@
+{{ define "main" }}
+<main class="has_sidebar">
+    <div class="container main_content">
+        {{partial "banner.html" . }}
+        <h2>Видеоуроки по Hugo</h2>
+        {{partial "slider.html" . }}
+         <h2>Все статьи</h2>
+        {{partial "all-articles.html" . }}      
+    </div>
+    {{partial "sidebar-main.html" . }}
+</main>
+<footer></footer>
+{{end}}

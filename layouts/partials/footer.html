@@ -1,0 +1,18 @@
+<footer>
+	<div class="sticky">
+	<div class="to_top"><i class="icon-up-open"></i></div>
+	{{if not .IsHome }}
+	<div class="navigation">
+		{{ with .PrevInSection }}
+		<div class="prev"><a href="{{ .Permalink }}"><i class="icon-left-open"></i> {{ .Params.h1 }}</a></div>
+		{{ end }}
+		{{ with .NextInSection }}
+		<div class="next"><a href="{{ .Permalink }}">{{ .Params.h1 }} <i class="icon-right-open"></i></a></div>
+		{{ end }}
+	</div>
+	{{end}}
+	</div>
+</footer>
+{{range .Site.Params.scripts}}
+<script type="text/javascript" src="{{ . | absURL}}" defer="defer"></script>
+{{end}}

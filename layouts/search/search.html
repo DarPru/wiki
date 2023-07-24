@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{$lang := replace .RelPermalink "search/" "" }}
+<main class="has_sidebar">
+    <div class="container main_content">
+        <h1 class="main_title" id="main_title"></h1>
+        <div class="list_container">
+            <div class="result" data-lang="{{$lang}}" data-search="{{i18n "data_search"}}" data-result="{{i18n "data_result"}}" data-nofound="{{i18n "data_nofound"}}" data-empty="{{i18n "data_empty"}}"></div>
+        </div>
+    </div>
+    {{partial "sidebar-main.html" . }}
+</main>
+<footer></footer>
+{{end}}

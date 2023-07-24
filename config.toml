@@ -1,0 +1,118 @@
+baseURL = 'https://wiki.saitkotika.ru/'
+languageCode = 'en'
+defaultContentLanguage = "en"
+disableHugoGeneratorInject = true
+paginate = 50
+canonifyURLs = true
+
+
+
+[frontmatter]
+  date = ["publishDate", ":filename", "date", ":fileModTime"]
+  publishDate = ["publishDate", ":filename", "date", ":fileModTime"]
+  lastmod = ["lastmod", ":fileModTime"]
+
+[markup]
+
+[markup.tableOfContents]
+endLevel = 4
+ordered = true
+startLevel = 2
+
+[taxonomies]
+tag = "tags"
+
+[outputs]
+home = [ "HTML", "JSON"]
+
+[languages]
+
+[languages.en]
+contentDir = "content"
+languageName = "en"
+weight = 1
+
+
+[params]
+
+# close the site globally from the index
+noindex = true
+
+#  Basic scripts and styles
+
+styles = [
+	"/css/main.css",
+	"/css/slider.css"
+]
+fonts = [
+	"/fonts/4iCv6KVjbNBYlgoC1CzjsGyN.woff2",
+	"/fonts/icons.woff2"
+]
+scripts = [
+	"/js/slider.js",
+	"/js/main.js",
+	"/js/fuse.js",
+	"/js/search.js"
+]
+
+# Global parameters
+
+image = "/images/placeholder.png"
+image_small = "/images/placeholder_small.png"
+logo = "/images/logo.png"
+sitename = "sitename"
+
+
+[menu]
+
+[[menu.header]]
+name = "Developers"
+url = "#"
+weight = 1
+identifier = "devs"
+[[menu.header]]
+name = "Hugo developing"
+url = "/hugo/"
+weight = 1
+parent = "devs"
+[[menu.header]]
+name = "Devops and servers"
+url = "#"
+weight = 2
+parent = "devs"
+[[menu.header]]
+name = "Working with sites"
+url = "#"
+weight = 3
+parent = "devs"
+
+[[menu.header]]
+name = "SEO"
+url = "#"
+weight = 2
+identifier = "seo"
+[[menu.header]]
+name = "Domains"
+url = "#"
+weight = 2
+parent = "seo"
+[[menu.header]]
+name = "SEO"
+url = "#"
+weight = 1
+parent = "seo"
+
+[[menu.header]]
+name = "Content"
+url = "#"
+weight = 3
+
+[[menu.header]]
+name = "Start up site"
+url = "#"
+weight = 4
+
+[[menu.header]]
+name = "About"
+url = "#"
+weight = 5

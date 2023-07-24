@@ -1,0 +1,25 @@
+- id: site_navigation
+  translation: Site navigation
+- id: last_posts
+  translation: Latest posts
+- id: site_search
+  translation: Site search
+- id: tags_by_topic
+  translation: Related tags
+- id: all_tags
+  translation: All origins
+- id: data_search
+  translation: Search by
+- id: data_result
+  translation: Search results on demand
+- id: data_nofound
+  translation: Nothing found
+- id: data_empty
+  translation: Empty request given
+- id: top_search
+  translation: Top asked
+- id: by_tag
+  translation: Articles by tag
+- id: copied
+  translation: Copied
+

@@ -1,0 +1,21 @@
+<header>
+	<div class="header_left">
+		<div class="header_logo">
+			<a href="{{ absLangURL ""}}">
+				<img width="120" height="60" src="{{.Site.Params.logo}}" alt="{{.Site.Params.sitename}}">
+			</a>
+		</div>
+		{{partial "nav.html" . }}
+	</div>
+	<div class="header_right">
+		<div class="header_icons">
+			<a class="logout" href="/logout.php"><i class="icon-logout"></i></a>
+			<!-- <div class="light"><i class="icon-lightbulb"></i></div> -->
+		</div>
+		<div class="burger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+</header>

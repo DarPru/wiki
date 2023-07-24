@@ -1,0 +1,10 @@
+<div class="code_block">
+	<span class="code_copied">{{i18n "copied"}}</span>
+	<div class="code_copy"><i class="icon-docs"></i></div>
+	{{- $code := split .Inner "\n" -}}
+	<ol>
+		{{- range $code -}}
+		<li>{{.}}</li>		
+		{{- end -}}
+	</ol>
+</div>

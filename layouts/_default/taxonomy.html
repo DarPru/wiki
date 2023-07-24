@@ -1,0 +1,19 @@
+{{ define "main" }}
+<main class="has_sidebar">
+    <div class="container main_content">
+        <h1 class="main_title">{{i18n "by_tag"}} <span>{{.Data.Term}}</span></h1>
+        <div class="list_container">
+        	<ul>
+        		{{ $paginator := .Paginate .Pages }}
+	            {{ range $paginator.Pages }}
+        		<li><a href="{{.Permalink}}">{{.Params.h1}}</a></li>
+        		{{end}}
+
+        	</ul>
+        	 {{partial "pagination.html" . }}
+        </div>
+    </div>
+   
+</main>
+<footer></footer>
+{{end}}

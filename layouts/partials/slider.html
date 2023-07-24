@@ -1,0 +1,10 @@
+<div class="main_slider">
+    {{range .Params.slider}}
+    <div class="slider_item">
+        <div class="slider_item_inner" onClick="window.location.href='https://www.youtube.com/watch?v={{index . 0}}';">
+            <img width="470" height="255" src="https://img.youtube.com/vi/{{index . 0}}/0.jpg" alt="{{index . 1}}">
+            <span>{{index . 1}}</span>
+        </div>
+    </div>
+    {{end}}
+</div>

@@ -1,0 +1,31 @@
+{{- $.Scratch.Set "title" "" -}}
+{{- $.Scratch.Set "description" "" -}}
+
+{{- with .Title -}}
+
+{{- $.Scratch.Set "title" (. | markdownify) -}}
+
+{{- else -}}
+{{- with index site.Params.title .Type -}}
+{{- $.Scratch.Set "title" (. | replaceRE `@post_title@` $.Page.Params.h1 | replaceRE `@sep@` $.Site.Params.separator  | replaceRE `@sitename@` $.Site.Params.sitename ) -}}
+
+{{- else -}}
+{{- $.Scratch.Set "title" (.Site.Params.Title.default | replaceRE `@post_title@` $.Page.Params.h1 ) -}}
+{{- end -}}
+
+{{- end -}}
+
+
+{{- with .Params.description -}}
+
+{{- $.Scratch.Set "description" (. | markdownify) -}}
+
+{{- else -}}
+{{- with index site.Params.description .Type -}}
+{{- $.Scratch.Set "description" (. | replaceRE `@post_title@` $.Page.Params.h1 | replaceRE `@sep@` $.Site.Params.separator  | replaceRE `@sitename@` $.Site.Params.sitename ) -}}
+
+{{- else -}}
+{{- $.Scratch.Set "description" (.Site.Params.Description.default | replaceRE `@post_title@` $.Page.Params.h1 | replaceRE `@sep@` $.Site.Params.separator  | replaceRE `@sitename@` $.Site.Params.sitename) -}}
+{{- end -}}
+
+{{- end -}}

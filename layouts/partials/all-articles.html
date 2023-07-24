@@ -1,0 +1,15 @@
+<div class="main_articles">
+	{{ $paginator := .Paginate .Site.RegularPages }}
+    {{ range where $paginator.Pages "Type" "!=" "search"}}
+    
+		<div class="article_item" style="background-image: url({{if .Params.image}}{{.Params.image}}{{else}}{{.Site.Params.image}}{{end}});">
+			<a href="{{.Permalink}}">
+				<div class="cover"></div>
+				<div class="tag">{{.Type}}</div>
+				<span class="date">{{.PublishDate.Format "02.01.2006"}}</span>
+				<span class="title">{{.Params.h1}}</span>
+			</a>
+		</div>
+	{{end}}
+</div>
+{{partial "pagination.html" . }}
