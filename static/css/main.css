@@ -3,18 +3,18 @@
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url(/fonts/4iCv6KVjbNBYlgoC1CzjsGyN.woff2) format('woff2');
+    src: url(/wiki/fonts/4iCv6KVjbNBYlgoC1CzjsGyN.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 @font-face {
   font-family: 'icons';
-  src: url('/fonts/icons.eot?18706727');
-  src: url('/fonts/icons.eot?18706727#iefix') format('embedded-opentype'),
-       url('/fonts/icons.woff2?18706727') format('woff2'),
-       url('/fonts/icons.woff?18706727') format('woff'),
-       url('/fonts/icons.ttf?18706727') format('truetype'),
-       url('/fonts/icons.svg?18706727#icons') format('svg');
+  src: url('/wiki/fonts/icons.eot?18706727');
+  src: url('/wiki/fonts/icons.eot?18706727#iefix') format('embedded-opentype'),
+       url('/wiki/fonts/icons.woff2?18706727') format('woff2'),
+       url('/wiki/fonts/icons.woff?18706727') format('woff'),
+       url('/wiki/fonts/icons.ttf?18706727') format('truetype'),
+       url('/wiki/fonts/icons.svg?18706727#icons') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,7 +24,7 @@
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url(/fonts/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMlrTA.woff2) format('woff2');
+    src: url(/wiki/fonts/HI_diYsKILxRpg3hIP6sJ7fM7PqPMcMnZFqUwX28DJKQtMlrTA.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 

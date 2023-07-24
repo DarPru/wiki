@@ -1,1 +1,1 @@
-# wiki
+> **!!Note!!** Search in not allowed to github pages, but fill free to test to localy or on your own server
