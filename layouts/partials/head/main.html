@@ -24,8 +24,8 @@
 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
 {{- end -}}
 {{range .Site.Params.styles}}
-<link rel="stylesheet" href="{{ . | absURL}}">
+<link rel="stylesheet" href="{{ . }}">
 {{end}}
 {{range .Site.Params.fonts}}
-<link rel="preload" href="{{ . | absURL}}" as="font" crossorigin="anonymous">
+<link rel="preload" href="{{ . }}" as="font" crossorigin="anonymous">
 {{end}}
