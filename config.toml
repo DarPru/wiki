@@ -1,4 +1,4 @@
-baseURL = 'https://wiki.parpru.pro/'
+baseURL = 'https://wiki.darpru.pro/'
 languageCode = 'en'
 defaultContentLanguage = "en"
 disableHugoGeneratorInject = true
