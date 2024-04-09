@@ -1,4 +1,4 @@
-## Общие характеристики
+## General Characteristics
 
 This Hugo theme is designed for hosting informational articles. It can be used as a reference for a company's department.
 
