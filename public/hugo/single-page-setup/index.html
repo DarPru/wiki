@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title></title>
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon-16x16.png">
+<link rel="manifest" href="http://localhost:1313/images/site.webmanifest"><meta name='robots' content='noindex, nofollow' />
+<link rel="stylesheet" href="http://localhost:1313/css/main.css">
+
+<link rel="stylesheet" href="http://localhost:1313/css/slider.css">
+
+
+<link rel="preload" href="http://localhost:1313/fonts/4iCv6KVjbNBYlgoC1CzjsGyN.woff2" as="font" crossorigin="anonymous">
+
+<link rel="preload" href="http://localhost:1313/fonts/icons.woff2" as="font" crossorigin="anonymous">
+
+
+</head>
+<body><header>
+	<div class="header_left">
+		<div class="header_logo">
+			<a href="http://localhost:1313/">
+				<img width="120" height="60" src="http://localhost:1313/images/logo.png" alt="sitename">
+			</a>
+		</div>
+		<nav class="header_menu">
+    <ul>
+	    
+        
+        
+        
+        <li  class="has_children"><a href="http://localhost:1313/">Developers</a>
+        
+    	<ul class="sub_menu">
+    		
+    		<li>
+			    <a href="http://localhost:1313/hugo/">Hugo developing</a>
+    		</li>
+    		
+    		<li>
+			    <a href="http://localhost:1313/">Devops and servers</a>
+    		</li>
+    		
+    		<li>
+			    <a href="http://localhost:1313/">Working with sites</a>
+    		</li>
+    		
+    	</ul>
+        
+        </li>
+        
+        
+        
+        <li  class="has_children"><a href="http://localhost:1313/">SEO</a>
+        
+    	<ul class="sub_menu">
+    		
+    		<li>
+			    <a href="http://localhost:1313/">SEO</a>
+    		</li>
+    		
+    		<li>
+			    <a href="http://localhost:1313/">Domains</a>
+    		</li>
+    		
+    	</ul>
+        
+        </li>
+        
+        
+        
+        <li  ><a href="http://localhost:1313/">Content</a>
+        
+        </li>
+        
+        
+        
+        <li  ><a href="http://localhost:1313/">Start up site</a>
+        
+        </li>
+        
+        
+        
+        <li  ><a href="http://localhost:1313/">About</a>
+        
+        </li>
+        
+
+    </ul>
+</nav>
+	</div>
+	<div class="header_right">
+		<div class="header_icons">
+			<a class="logout" href="http://localhost:1313/logout.php"><i class="icon-logout"></i></a>
+			
+		</div>
+		<div class="burger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+</header>
+	
+<main class="has_sidebar">
+    <div class="container main_content">
+        <h1 class="main_title">Creating a default post file (single page)</h1>
+        <div class="toc_block mobile">
+            <h2>Site navigation</h2>
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#what-content-is-displayed-on-pages-of-type-single">What content is displayed on pages of type single?</a></li>
+    <li><a href="#initializing-the-default-template">Initializing the default template</a></li>
+    <li><a href="#display-article-title">Display article title</a></li>
+  </ol>
+</nav>
+        </div>
+        <div class="tags_block mobile">
+            <h2>Related tags</h2>
+            
+            
+            
+            <span><a href="http://localhost:1313/tags/default/">default</a></span>
+            
+            
+            
+            <span><a href="http://localhost:1313/tags/dev/">dev</a></span>
+            
+            
+            
+            <span><a href="http://localhost:1313/tags/hugo/">hugo</a></span>
+            
+            
+            
+            <span><a href="http://localhost:1313/tags/single/">single</a></span>
+            
+            
+            
+            <span><a href="http://localhost:1313/tags/to-start/">to-start</a></span>
+            
+            
+            
+        </div>
+        <p>All internal pages in hugo are of type single and by default use the <strong>single</strong> template from the <strong>_default</strong> folder. Read more about <a href="http://localhost:1313/">template hierarchy</a> and <a href="http://localhost:1313/">how to override the default template</a> for a specific page type.</p>
+<h2 id="what-content-is-displayed-on-pages-of-type-single">What content is displayed on pages of type single?</h2>
+<p>All markdown files that are named and stored in the content folder or subfolders will be of type single.</p>
+<p>For example, this article is located in the <em>dev</em> folder and is named <strong>single-page-setup.md</strong>, so it will pull the <strong>_default/single</strong> template. You can read about other content types <a href="http://localhost:1313/">here</a>.</p>
+<h2 id="initializing-the-default-template">Initializing the default template</h2>
+<p>To make the template work you need to perform 2 steps:</p>
+<ol>
+<li>Create a <strong>single.html</strong> file in the <strong>layouts/_default</strong> folder.</li>
+<li>Fill it with <em>any</em> content</li>
+</ol>
+<p>Typically, such a template is filled with html layout, and shortcodes. If you use the baseof file, don&rsquo;t forget to initialize it in the template using <strong>{{ define &ldquo;main&rdquo; }}</strong>, if you don&rsquo;t, you&rsquo;ll probably need to plug in the <strong>header</strong> and <strong>footer</strong> modules. As an example, here is the code for the current page:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>{{ define &#34;main&#34; }}</li><li>&lt;main class=&#34;has_sidebar&#34;&gt;</li><li>	&lt;div class=&#34;container&#34;&gt;</li><li>		&lt;h1&gt;{{.Params.h1}}&lt;/h1&gt;</li><li>		{{.Content}}	</li><li>	&lt;/div&gt;</li><li>	{{partial &#34;sidebar.html&#34; . }}</li><li>&lt;/main&gt;</li><li>{{end}}</li></ol>
+</div><ul>
+<li>Method <strong>Params.KEY</strong> - calls a special parameter from the macrdown file. Read more about <a href="http://localhost:1313/">macrodownfile structure here</a>.</li>
+<li>The <strong>Content</strong> method pulls all other content from the file.</li>
+<li><strong>{{partial &ldquo;sidebar.html&rdquo; . }}</strong> - connects the sidebar. Since a sidebar is not planned on every page type, I only call this in the <strong>single.html</strong> file.</li>
+</ul>
+<p>All styles and scripts for this project are specified in the site config, more details <a href="http://localhost:1313/devs/how-startup-hugo-site/#connect-styles-and-scripts">here</a>:</p>
+<p><img alt="connect-scripts-and-styles" src="http://localhost:1313/images/devs/single-page-setup/style-setup.png"></p>
+<h2 id="display-article-title">Display article title</h2>
+<p>Hugo provides automatic generation of article content, the so-called <strong>table of content</strong>, more details <a href="https://gohugo.io/content-management/toc/">here</a>.</p>
+<p>To connect content to the project use the following code</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>{{ .TableOfContents }}</li></ol>
+</div><p>You can customize and customize the content. This is done through a config file. Example customization code:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>[markup]</li><li>  [markup.tableOfContents]</li><li>    endLevel = 3</li><li>    ordered = true</li><li>    startLevel = 2</li></ol>
+</div><ul>
+<li><strong>startLevel</strong> - specifies from which header level the content will be started. The default setting is 1 - h1 header.</li>
+<li><strong>endLevel</strong> - specifies at what level of nesting of headers the rendering of the content should be stopped. For example, if the value 3 is specified, then headings of the level below (h4, h5, h6) will not be included in the content.</li>
+<li><strong>ordered</strong> - if <em>true</em> is specified, the list will be numbered, otherwise it will be labeled (default value).</li>
+</ul>
+<blockquote>
+<p>Link to original - <a href="https://gohugo.io/getting-started/configuration-markup/#table-of-contents">here</a>.</p>
+</blockquote>
+
+        <div class="recent_posts mobile">
+            <h2>Latest posts</h2>
+            <div class="recent_posts_mobile--inner">
+	            
+	            <div class="recent_post">
+	                <a href="http://localhost:1313/hugo/front-page-setup/">
+	                    <img width="60" height="60" src="http://localhost:1313/images/placeholder.png" alt="Creating a home page">
+	                    <div class="recent_post_content">
+	                        <h3>Creating a home page</h3>
+	                        <p>Home page hierarchy To create a unique layout for the homepage, you need to create a index.html file in the layouts folder. The layout from this file will be displayed on all homepages of all language versions.
+In the absence of this file, the layout is taken from layouts/_default/list.html.
+Layout If using the baseof template, you will need to initialize it first:
+Copied{{ define &#34;main&#34; }}&lt;-- HERE&#39;S THE LAYOUT --&gt;{{end}}If, however, you just output the header and footer into separate parshals, it will be necessary to call them in the template:</p>
+	                    </div>
+	                </a>
+	            </div>
+	            
+	            <div class="recent_post">
+	                <a href="http://localhost:1313/hugo/how-startup-hugo-site/">
+	                    <img width="60" height="60" src="http://localhost:1313/images/placeholder.png" alt="Creating a Project on the Hogo.">
+	                    <div class="recent_post_content">
+	                        <h3>Creating a Project on the Hogo.</h3>
+	                        <p>In this article we will consider how to create a hugo site from scratch, as well as understand the basic steps in creating a standard theme.
+It is important to understand that themes are always created for different projects and needs, so some of the steps in these instructions may be optional, before creating a project you should always carefully read the ToR and discuss all questions and controversial issues with your team leader.</p>
+	                    </div>
+	                </a>
+	            </div>
+	            
+	            <div class="recent_post">
+	                <a href="http://localhost:1313/hugo/kak-zapustit-multilang/">
+	                    <img width="60" height="60" src="http://localhost:1313/images/placeholder.png" alt="How to start a multilang">
+	                    <div class="recent_post_content">
+	                        <h3>How to start a multilang</h3>
+	                        <p>To deploy a multilang site you need:
+In the config. Specify the default language of the site CopieddefaultContentLanguage = &#34;SLAG&#34;Create a languages section and add as many languages as you want there Copied[languages][languages.en]contentDir = &#34;content/en&#34;languageName = &#34;en&#34;[languages.ru]contentDir = &#34;content/en&#34;languageName = &#34;ru&#34;[languages.ua]contentDir = &#34;content/ua&#34;languageName = &#34;ua&#34;languageName - language slug contentDir - path to the folder with language content Translating fields through i18n Create i18n folder in the project root.</p>
+	                    </div>
+	                </a>
+	            </div>
+	            
+	        </div>
+        </div>
+    </div>
+    <aside class="sidebar">
+    <div class="toc_block">
+        <h2>Site navigation</h2>
+        <nav id="TableOfContents">
+  <ol>
+    <li><a href="#what-content-is-displayed-on-pages-of-type-single">What content is displayed on pages of type single?</a></li>
+    <li><a href="#initializing-the-default-template">Initializing the default template</a></li>
+    <li><a href="#display-article-title">Display article title</a></li>
+  </ol>
+</nav>
+    </div>
+    <div class="recent_posts">
+        <h2>Latest posts</h2>
+        
+        <div class="recent_post">
+            <a href="http://localhost:1313/hugo/front-page-setup/">
+                <img width="60" height="60" src="http://localhost:1313/images/placeholder_small.png" alt="Creating a home page">
+                <div class="recent_post_content">
+                    <h3>Creating a home page</h3>
+                    <p>Home page hierarchy To create a unique layout for the homepage, you need to create a index.html file in the layouts folder. The layout from this file will be displayed on all homepages of all language versions.
+In the absence of this file, the layout is taken from layouts/_default/list.html.
+Layout If using the baseof template, you will need to initialize it first:
+Copied{{ define &#34;main&#34; }}&lt;-- HERE&#39;S THE LAYOUT --&gt;{{end}}If, however, you just output the header and footer into separate parshals, it will be necessary to call them in the template:</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="recent_post">
+            <a href="http://localhost:1313/hugo/how-startup-hugo-site/">
+                <img width="60" height="60" src="http://localhost:1313/images/placeholder_small.png" alt="Creating a Project on the Hogo.">
+                <div class="recent_post_content">
+                    <h3>Creating a Project on the Hogo.</h3>
+                    <p>In this article we will consider how to create a hugo site from scratch, as well as understand the basic steps in creating a standard theme.
+It is important to understand that themes are always created for different projects and needs, so some of the steps in these instructions may be optional, before creating a project you should always carefully read the ToR and discuss all questions and controversial issues with your team leader.</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="recent_post">
+            <a href="http://localhost:1313/hugo/kak-zapustit-multilang/">
+                <img width="60" height="60" src="http://localhost:1313/images/placeholder_small.png" alt="How to start a multilang">
+                <div class="recent_post_content">
+                    <h3>How to start a multilang</h3>
+                    <p>To deploy a multilang site you need:
+In the config. Specify the default language of the site CopieddefaultContentLanguage = &#34;SLAG&#34;Create a languages section and add as many languages as you want there Copied[languages][languages.en]contentDir = &#34;content/en&#34;languageName = &#34;en&#34;[languages.ru]contentDir = &#34;content/en&#34;languageName = &#34;ru&#34;[languages.ua]contentDir = &#34;content/ua&#34;languageName = &#34;ua&#34;languageName - language slug contentDir - path to the folder with language content Translating fields through i18n Create i18n folder in the project root.</p>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+     <div class="search">
+        <form class="desctop__form" action="http://localhost:1313/search/" method="get">
+        <input type="search" name="s" placeholder="Site search" value=""><button class="search_button"><i class="icon-right-open"></i></button></form>
+    </div>
+    <div class="tags_block">
+        <h2>Related tags</h2>
+        
+           
+              
+                <span><a href="http://localhost:1313/tags/default/">default</a></span>
+              
+           
+              
+                <span><a href="http://localhost:1313/tags/dev/">dev</a></span>
+              
+           
+              
+                <span><a href="http://localhost:1313/tags/hugo/">hugo</a></span>
+              
+           
+              
+                <span><a href="http://localhost:1313/tags/single/">single</a></span>
+              
+           
+              
+                <span><a href="http://localhost:1313/tags/to-start/">to-start</a></span>
+              
+          
+        
+
+    </div>
+</aside>
+</main>
+<footer>
+	<div class="sticky">
+	<div class="to_top"><i class="icon-up-open"></i></div>
+	
+	<div class="navigation">
+		
+		
+		<div class="next"><a href="http://localhost:1313/hugo/kak-zapustit-multilang/">How to start a multilang <i class="icon-right-open"></i></a></div>
+		
+	</div>
+	
+	</div>
+</footer>
+
+<script type="text/javascript" src="http://localhost:1313/js/slider.js" defer="defer"></script>
+
+<script type="text/javascript" src="http://localhost:1313/js/main.js" defer="defer"></script>
+
+<script type="text/javascript" src="http://localhost:1313/js/fuse.js" defer="defer"></script>
+
+<script type="text/javascript" src="http://localhost:1313/js/search.js" defer="defer"></script>
+
+</body>
+</html>

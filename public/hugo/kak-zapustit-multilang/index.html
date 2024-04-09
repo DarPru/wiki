@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title></title>
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon-16x16.png">
+<link rel="manifest" href="http://localhost:1313/images/site.webmanifest"><meta name='robots' content='noindex, nofollow' />
+<link rel="stylesheet" href="http://localhost:1313/css/main.css">
+
+<link rel="stylesheet" href="http://localhost:1313/css/slider.css">
+
+
+<link rel="preload" href="http://localhost:1313/fonts/4iCv6KVjbNBYlgoC1CzjsGyN.woff2" as="font" crossorigin="anonymous">
+
+<link rel="preload" href="http://localhost:1313/fonts/icons.woff2" as="font" crossorigin="anonymous">
+
+
+</head>
+<body><header>
+	<div class="header_left">
+		<div class="header_logo">
+			<a href="http://localhost:1313/">
+				<img width="120" height="60" src="http://localhost:1313/images/logo.png" alt="sitename">
+			</a>
+		</div>
+		<nav class="header_menu">
+    <ul>
+	    
+        
+        
+        
+        <li  class="has_children"><a href="http://localhost:1313/">Developers</a>
+        
+    	<ul class="sub_menu">
+    		
+    		<li>
+			    <a href="http://localhost:1313/hugo/">Hugo developing</a>
+    		</li>
+    		
+    		<li>
+			    <a href="http://localhost:1313/">Devops and servers</a>
+    		</li>
+    		
+    		<li>
+			    <a href="http://localhost:1313/">Working with sites</a>
+    		</li>
+    		
+    	</ul>
+        
+        </li>
+        
+        
+        
+        <li  class="has_children"><a href="http://localhost:1313/">SEO</a>
+        
+    	<ul class="sub_menu">
+    		
+    		<li>
+			    <a href="http://localhost:1313/">SEO</a>
+    		</li>
+    		
+    		<li>
+			    <a href="http://localhost:1313/">Domains</a>
+    		</li>
+    		
+    	</ul>
+        
+        </li>
+        
+        
+        
+        <li  ><a href="http://localhost:1313/">Content</a>
+        
+        </li>
+        
+        
+        
+        <li  ><a href="http://localhost:1313/">Start up site</a>
+        
+        </li>
+        
+        
+        
+        <li  ><a href="http://localhost:1313/">About</a>
+        
+        </li>
+        
+
+    </ul>
+</nav>
+	</div>
+	<div class="header_right">
+		<div class="header_icons">
+			<a class="logout" href="http://localhost:1313/logout.php"><i class="icon-logout"></i></a>
+			
+		</div>
+		<div class="burger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+</header>
+	
+<main class="has_sidebar">
+    <div class="container main_content">
+        <h1 class="main_title">How to start a multilang</h1>
+        <div class="toc_block mobile">
+            <h2>Site navigation</h2>
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#in-the-config">In the config.</a></li>
+    <li><a href="#translating-fields-through-i18n">Translating fields through i18n</a>
+      <ol>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#language-menu">Language menu</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+        </div>
+        <div class="tags_block mobile">
+            <h2>Related tags</h2>
+            
+            
+            
+            <span><a href="http://localhost:1313/tags/dev/">dev</a></span>
+            
+            
+            
+            <span><a href="http://localhost:1313/tags/hugo/">hugo</a></span>
+            
+            
+            
+            <span><a href="http://localhost:1313/tags/to-start/">to-start</a></span>
+            
+            
+            
+        </div>
+        <p>To deploy a multilang site you need:</p>
+<h2 id="in-the-config">In the config.</h2>
+<ol>
+<li>Specify the default language of the site</li>
+</ol>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>defaultContentLanguage = &#34;SLAG&#34;</li></ol>
+</div><ol start="2">
+<li>Create a <strong>languages</strong> section and add as many languages as you want there</li>
+</ol>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>[languages]</li><li>[languages.en]</li><li>contentDir = &#34;content/en&#34;</li><li>languageName = &#34;en&#34;</li><li>[languages.ru]</li><li>contentDir = &#34;content/en&#34;</li><li>languageName = &#34;ru&#34;</li><li>[languages.ua]</li><li>contentDir = &#34;content/ua&#34;</li><li>languageName = &#34;ua&#34;</li></ol>
+</div><ul>
+<li><strong>languageName</strong> - language slug</li>
+<li><strong>contentDir</strong> - path to the folder with language content</li>
+</ul>
+<h2 id="translating-fields-through-i18n">Translating fields through i18n</h2>
+<ol>
+<li>Create <strong>i18n</strong> folder in the project root.</li>
+<li>Add to it <strong>yaml</strong> file named by language slang: *LANG.yaml</li>
+<li>Throw in all fields needed for translation according to the key-value scheme.</li>
+</ol>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>- id: &#34;KEY_IN_VERSION&#34;</li><li>  translation: &#34;TRANSLATION&#34;</li></ol>
+</div><h3 id="content">Content</h3>
+<ol>
+<li>In the <strong>content</strong> folder, create the desired number of folders by the name of the language syllable</li>
+<li>Add translated content there</li>
+</ol>
+<h3 id="language-menu">Language menu</h3>
+<ol>
+<li>Design the language menu</li>
+<li>wrap it in a hugo loop</li>
+</ol>
+<blockquote>
+<p>Pages with no translations in the folders will not be displayed in the language menu.</p>
+</blockquote>
+<p>You can use <a href="https://github.com/1cats/hugo-clean-template">clean theme</a> to run a multi-language site.</p>
+
+        <div class="recent_posts mobile">
+            <h2>Latest posts</h2>
+            <div class="recent_posts_mobile--inner">
+	            
+	            <div class="recent_post">
+	                <a href="http://localhost:1313/hugo/front-page-setup/">
+	                    <img width="60" height="60" src="http://localhost:1313/images/placeholder.png" alt="Creating a home page">
+	                    <div class="recent_post_content">
+	                        <h3>Creating a home page</h3>
+	                        <p>Home page hierarchy To create a unique layout for the homepage, you need to create a index.html file in the layouts folder. The layout from this file will be displayed on all homepages of all language versions.
+In the absence of this file, the layout is taken from layouts/_default/list.html.
+Layout If using the baseof template, you will need to initialize it first:
+Copied{{ define &#34;main&#34; }}&lt;-- HERE&#39;S THE LAYOUT --&gt;{{end}}If, however, you just output the header and footer into separate parshals, it will be necessary to call them in the template:</p>
+	                    </div>
+	                </a>
+	            </div>
+	            
+	            <div class="recent_post">
+	                <a href="http://localhost:1313/hugo/how-startup-hugo-site/">
+	                    <img width="60" height="60" src="http://localhost:1313/images/placeholder.png" alt="Creating a Project on the Hogo.">
+	                    <div class="recent_post_content">
+	                        <h3>Creating a Project on the Hogo.</h3>
+	                        <p>In this article we will consider how to create a hugo site from scratch, as well as understand the basic steps in creating a standard theme.
+It is important to understand that themes are always created for different projects and needs, so some of the steps in these instructions may be optional, before creating a project you should always carefully read the ToR and discuss all questions and controversial issues with your team leader.</p>
+	                    </div>
+	                </a>
+	            </div>
+	            
+	            <div class="recent_post">
+	                <a href="http://localhost:1313/hugo/kak-zapustit-multilang/">
+	                    <img width="60" height="60" src="http://localhost:1313/images/placeholder.png" alt="How to start a multilang">
+	                    <div class="recent_post_content">
+	                        <h3>How to start a multilang</h3>
+	                        <p>To deploy a multilang site you need:
+In the config. Specify the default language of the site CopieddefaultContentLanguage = &#34;SLAG&#34;Create a languages section and add as many languages as you want there Copied[languages][languages.en]contentDir = &#34;content/en&#34;languageName = &#34;en&#34;[languages.ru]contentDir = &#34;content/en&#34;languageName = &#34;ru&#34;[languages.ua]contentDir = &#34;content/ua&#34;languageName = &#34;ua&#34;languageName - language slug contentDir - path to the folder with language content Translating fields through i18n Create i18n folder in the project root.</p>
+	                    </div>
+	                </a>
+	            </div>
+	            
+	        </div>
+        </div>
+    </div>
+    <aside class="sidebar">
+    <div class="toc_block">
+        <h2>Site navigation</h2>
+        <nav id="TableOfContents">
+  <ol>
+    <li><a href="#in-the-config">In the config.</a></li>
+    <li><a href="#translating-fields-through-i18n">Translating fields through i18n</a>
+      <ol>
+        <li><a href="#content">Content</a></li>
+        <li><a href="#language-menu">Language menu</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav>
+    </div>
+    <div class="recent_posts">
+        <h2>Latest posts</h2>
+        
+        <div class="recent_post">
+            <a href="http://localhost:1313/hugo/front-page-setup/">
+                <img width="60" height="60" src="http://localhost:1313/images/placeholder_small.png" alt="Creating a home page">
+                <div class="recent_post_content">
+                    <h3>Creating a home page</h3>
+                    <p>Home page hierarchy To create a unique layout for the homepage, you need to create a index.html file in the layouts folder. The layout from this file will be displayed on all homepages of all language versions.
+In the absence of this file, the layout is taken from layouts/_default/list.html.
+Layout If using the baseof template, you will need to initialize it first:
+Copied{{ define &#34;main&#34; }}&lt;-- HERE&#39;S THE LAYOUT --&gt;{{end}}If, however, you just output the header and footer into separate parshals, it will be necessary to call them in the template:</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="recent_post">
+            <a href="http://localhost:1313/hugo/how-startup-hugo-site/">
+                <img width="60" height="60" src="http://localhost:1313/images/placeholder_small.png" alt="Creating a Project on the Hogo.">
+                <div class="recent_post_content">
+                    <h3>Creating a Project on the Hogo.</h3>
+                    <p>In this article we will consider how to create a hugo site from scratch, as well as understand the basic steps in creating a standard theme.
+It is important to understand that themes are always created for different projects and needs, so some of the steps in these instructions may be optional, before creating a project you should always carefully read the ToR and discuss all questions and controversial issues with your team leader.</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="recent_post">
+            <a href="http://localhost:1313/hugo/kak-zapustit-multilang/">
+                <img width="60" height="60" src="http://localhost:1313/images/placeholder_small.png" alt="How to start a multilang">
+                <div class="recent_post_content">
+                    <h3>How to start a multilang</h3>
+                    <p>To deploy a multilang site you need:
+In the config. Specify the default language of the site CopieddefaultContentLanguage = &#34;SLAG&#34;Create a languages section and add as many languages as you want there Copied[languages][languages.en]contentDir = &#34;content/en&#34;languageName = &#34;en&#34;[languages.ru]contentDir = &#34;content/en&#34;languageName = &#34;ru&#34;[languages.ua]contentDir = &#34;content/ua&#34;languageName = &#34;ua&#34;languageName - language slug contentDir - path to the folder with language content Translating fields through i18n Create i18n folder in the project root.</p>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+     <div class="search">
+        <form class="desctop__form" action="http://localhost:1313/search/" method="get">
+        <input type="search" name="s" placeholder="Site search" value=""><button class="search_button"><i class="icon-right-open"></i></button></form>
+    </div>
+    <div class="tags_block">
+        <h2>Related tags</h2>
+        
+           
+              
+                <span><a href="http://localhost:1313/tags/dev/">dev</a></span>
+              
+           
+              
+                <span><a href="http://localhost:1313/tags/hugo/">hugo</a></span>
+              
+           
+              
+                <span><a href="http://localhost:1313/tags/to-start/">to-start</a></span>
+              
+          
+        
+
+    </div>
+</aside>
+</main>
+<footer>
+	<div class="sticky">
+	<div class="to_top"><i class="icon-up-open"></i></div>
+	
+	<div class="navigation">
+		
+		<div class="prev"><a href="http://localhost:1313/hugo/single-page-setup/"><i class="icon-left-open"></i> Creating a default post file (single page)</a></div>
+		
+		
+		<div class="next"><a href="http://localhost:1313/hugo/how-startup-hugo-site/">Creating a Project on the Hogo. <i class="icon-right-open"></i></a></div>
+		
+	</div>
+	
+	</div>
+</footer>
+
+<script type="text/javascript" src="http://localhost:1313/js/slider.js" defer="defer"></script>
+
+<script type="text/javascript" src="http://localhost:1313/js/main.js" defer="defer"></script>
+
+<script type="text/javascript" src="http://localhost:1313/js/fuse.js" defer="defer"></script>
+
+<script type="text/javascript" src="http://localhost:1313/js/search.js" defer="defer"></script>
+
+</body>
+</html>

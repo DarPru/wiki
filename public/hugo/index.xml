@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <link>http://localhost:1313/hugo/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 09 Apr 2024 12:16:53 +0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/hugo/front-page-setup/</link>
+      <pubDate>Tue, 09 Apr 2024 12:16:53 +0400</pubDate>
+      <guid>http://localhost:1313/hugo/front-page-setup/</guid>
+      <description>Home page hierarchy To create a unique layout for the homepage, you need to create a index.html file in the layouts folder. The layout from this file will be displayed on all homepages of all language versions.&#xA;In the absence of this file, the layout is taken from layouts/_default/list.html.&#xA;Layout If using the baseof template, you will need to initialize it first:&#xA;Copied&#xD;{{ define &amp;#34;main&amp;#34; }}&#xD;&amp;lt;-- HERE&amp;#39;S THE LAYOUT --&amp;gt;&#xD;{{end}}&#xD;If, however, you just output the header and footer into separate parshals, it will be necessary to call them in the template:</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/hugo/how-startup-hugo-site/</link>
+      <pubDate>Tue, 09 Apr 2024 12:16:53 +0400</pubDate>
+      <guid>http://localhost:1313/hugo/how-startup-hugo-site/</guid>
+      <description>In this article we will consider how to create a hugo site from scratch, as well as understand the basic steps in creating a standard theme.&#xA;It is important to understand that themes are always created for different projects and needs, so some of the steps in these instructions may be optional, before creating a project you should always carefully read the ToR and discuss all questions and controversial issues with your team leader.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/hugo/kak-zapustit-multilang/</link>
+      <pubDate>Tue, 09 Apr 2024 12:16:53 +0400</pubDate>
+      <guid>http://localhost:1313/hugo/kak-zapustit-multilang/</guid>
+      <description>To deploy a multilang site you need:&#xA;In the config. Specify the default language of the site Copied&#xD;defaultContentLanguage = &amp;#34;SLAG&amp;#34;&#xD;Create a languages section and add as many languages as you want there Copied&#xD;[languages]&#xD;[languages.en]&#xD;contentDir = &amp;#34;content/en&amp;#34;&#xD;languageName = &amp;#34;en&amp;#34;&#xD;[languages.ru]&#xD;contentDir = &amp;#34;content/en&amp;#34;&#xD;languageName = &amp;#34;ru&amp;#34;&#xD;[languages.ua]&#xD;contentDir = &amp;#34;content/ua&amp;#34;&#xD;languageName = &amp;#34;ua&amp;#34;&#xD;languageName - language slug contentDir - path to the folder with language content Translating fields through i18n Create i18n folder in the project root.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/hugo/single-page-setup/</link>
+      <pubDate>Tue, 09 Apr 2024 12:16:53 +0400</pubDate>
+      <guid>http://localhost:1313/hugo/single-page-setup/</guid>
+      <description>All internal pages in hugo are of type single and by default use the single template from the _default folder. Read more about template hierarchy and how to override the default template for a specific page type.&#xA;What content is displayed on pages of type single? All markdown files that are named and stored in the content folder or subfolders will be of type single.&#xA;For example, this article is located in the dev folder and is named single-page-setup.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title></title>
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/images/favicon-16x16.png">
+<link rel="manifest" href="http://localhost:1313/images/site.webmanifest"><meta name='robots' content='noindex, nofollow' />
+<link rel="stylesheet" href="http://localhost:1313/css/main.css">
+
+<link rel="stylesheet" href="http://localhost:1313/css/slider.css">
+
+
+<link rel="preload" href="http://localhost:1313/fonts/4iCv6KVjbNBYlgoC1CzjsGyN.woff2" as="font" crossorigin="anonymous">
+
+<link rel="preload" href="http://localhost:1313/fonts/icons.woff2" as="font" crossorigin="anonymous">
+
+
+</head>
+<body><header>
+	<div class="header_left">
+		<div class="header_logo">
+			<a href="http://localhost:1313/">
+				<img width="120" height="60" src="http://localhost:1313/images/logo.png" alt="sitename">
+			</a>
+		</div>
+		<nav class="header_menu">
+    <ul>
+	    
+        
+        
+        
+        <li  class="has_children"><a href="http://localhost:1313/">Developers</a>
+        
+    	<ul class="sub_menu">
+    		
+    		<li>
+			    <a href="http://localhost:1313/hugo/">Hugo developing</a>
+    		</li>
+    		
+    		<li>
+			    <a href="http://localhost:1313/">Devops and servers</a>
+    		</li>
+    		
+    		<li>
+			    <a href="http://localhost:1313/">Working with sites</a>
+    		</li>
+    		
+    	</ul>
+        
+        </li>
+        
+        
+        
+        <li  class="has_children"><a href="http://localhost:1313/">SEO</a>
+        
+    	<ul class="sub_menu">
+    		
+    		<li>
+			    <a href="http://localhost:1313/">SEO</a>
+    		</li>
+    		
+    		<li>
+			    <a href="http://localhost:1313/">Domains</a>
+    		</li>
+    		
+    	</ul>
+        
+        </li>
+        
+        
+        
+        <li  ><a href="http://localhost:1313/">Content</a>
+        
+        </li>
+        
+        
+        
+        <li  ><a href="http://localhost:1313/">Start up site</a>
+        
+        </li>
+        
+        
+        
+        <li  ><a href="http://localhost:1313/">About</a>
+        
+        </li>
+        
+
+    </ul>
+</nav>
+	</div>
+	<div class="header_right">
+		<div class="header_icons">
+			<a class="logout" href="http://localhost:1313/logout.php"><i class="icon-logout"></i></a>
+			
+		</div>
+		<div class="burger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+</header>
+	
+<main class="has_sidebar">
+    <div class="container main_content">
+        <h1 class="main_title">Creating a Project on the Hogo.</h1>
+        <div class="toc_block mobile">
+            <h2>Site navigation</h2>
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#deploy-the-project">Deploy the project</a></li>
+    <li><a href="#basic-structure">Basic structure</a></li>
+    <li><a href="#working-with-the-baseof-file">Working with the baseof file</a></li>
+    <li><a href="#customize-the-parshal-in-the-head">Customize the parshal in the head</a>
+      <ol>
+        <li><a href="#meta-for-pagination-pages">Meta for pagination pages</a></li>
+        <li><a href="#add-the-option-to-close-from-indexing">Add the option to close from indexing</a></li>
+        <li><a href="#connect-styles-and-fonts">Connect styles and fonts</a>
+          <ol>
+            <li><a href="#connecting-directly-in-head">Connecting directly in head</a></li>
+            <li><a href="#where-do-i-put-static-content">Where do I put static content?</a></li>
+            <li><a href="#connection-via-site-config">Connection via site config</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#customize-footer">Customize footer</a></li>
+    <li><a href="#call-baseof-in-theme-files">Call baseof in theme files</a></li>
+    <li><a href="#configure-the-config">Configure the config</a>
+      <ol>
+        <li><a href="#baseurl">baseURL</a></li>
+        <li><a href="#languagecode">languageCode</a>
+          <ol>
+            <li><a href="#title">title</a></li>
+          </ol>
+        </li>
+        <li><a href="#defaultcontentlanguage">defaultContentLanguage</a></li>
+        <li><a href="#disablehugogeneratorinject">disableHugoGeneratorInject</a></li>
+        <li><a href="#canonifyurls">canonifyURLs</a></li>
+      </ol>
+    </li>
+    <li><a href="#language-options">Language Options</a></li>
+    <li><a href="#lock-the-site-from-the-index">Lock the site from the index</a></li>
+  </ol>
+</nav>
+        </div>
+        <div class="tags_block mobile">
+            <h2>Related tags</h2>
+            
+            
+            
+            <span><a href="http://localhost:1313/tags/baseof/">baseof</a></span>
+            
+            
+            
+            <span><a href="http://localhost:1313/tags/config/">config</a></span>
+            
+            
+            
+            <span><a href="http://localhost:1313/tags/dev/">dev</a></span>
+            
+            
+            
+            <span><a href="http://localhost:1313/tags/hugo/">hugo</a></span>
+            
+            
+            
+            <span><a href="http://localhost:1313/tags/to-start/">to-start</a></span>
+            
+            
+            
+        </div>
+        <p>In this article we will consider how to create a hugo site from scratch, as well as understand the basic steps in creating a standard theme.</p>
+<blockquote>
+<p>It is important to understand that themes are always created for different projects and needs, so some of the steps in these instructions may be optional, before creating a project you should always carefully read the ToR and discuss all questions and controversial issues with your team leader.</p>
+</blockquote>
+<h2 id="deploy-the-project">Deploy the project</h2>
+<p>After <a href="http://localhost:1313/devs/install-hugo/">install-hugo</a> open terminal and execute the following command:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>hugo new site SITE NAME</li></ol>
+</div><p>In the <strong>SITE_NAME</strong> field specify the name of your project</p>
+<p><img alt="project initialization" src="http://localhost:1313/images/devs/how-startup-hugo-site/build-bolerplate.png"></p>
+<p>After successful initialization, you will receive a notification that your site has been created.</p>
+<p>Go into the folder and see the following <a href="http://localhost:1313/devs/hugo-project-structure/">structure</a>:</p>
+<p><img alt="project-structure" src="http://localhost:1313/images/devs/how-startup-hugo-site/hugo-structure.png"></p>
+<h2 id="basic-structure">Basic structure</h2>
+<p>When creating a theme, we will be working in the <strong>layuots</strong> folder.</p>
+<ol>
+<li>Create a <strong>_default</strong> folder in the root <strong>layuots</strong>, these will be the basic templates of our project. You can learn more about <a href="http://localhost:1313/">template hierarchy</a> here.</li>
+<li>In <strong>_default</strong> create templates for the <strong>list.html</strong> and <strong>single.html</strong> directory</li>
+</ol>
+<blockquote>
+<p>Be sure to write something (you can just put a symbol or write hello world, we will start template layout later) in html files, otherwise the template will not be readable.</p>
+</blockquote>
+<ol start="3">
+<li>Create a file <strong>baseof.html</strong>. As a result, we get the following structure:</li>
+</ol>
+<p><img alt="default-folder-structure" src="http://localhost:1313/images/devs/how-startup-hugo-site/default-folder-structure.png"></p>
+<h2 id="working-with-the-baseof-file">Working with the baseof file</h2>
+<p>In the <strong>baseof.html</strong> file, expand the base structure of the html document</p>
+<p><img alt="baseof base structure" src="http://localhost:1313/images/devs/how-startup-hugo-site/baseof-main.png"></p>
+<p>Making the structure dynamic:</p>
+<ul>
+<li>
+<p>In the <em>html</em> tag, in the <em>lang</em> attribute, enter the hugo code <strong>{{{.Language.Lang }}</strong></p>
+</li>
+<li>
+<p>Cut the content from the <strong>head</strong> tag and transfer it to a new file</p>
+</li>
+<li>
+<p>Save the new file under the path <em>layouts/partials/head</em> (we create folders by ourselves), we can name it arbitrarily, I will choose <strong>main.html</strong>.</p>
+</li>
+<li>
+<p>In the <strong>baseof.html</strong> file, in the <strong>head</strong> tag, call the created file. Use the following code <strong>{{{{- partial &ldquo;head/main.html&rdquo; . }}</strong></p>
+</li>
+</ul>
+<blockquote>
+<p><strong>partial</strong> is the keyword for calling modules from the <em>partials</em> folder, after it we specify the path to the module in quotes, then we need to put the <strong>.</strong> sign - more about passing the scope <a href="http://localhost:1313/">here</a>. The <strong>-</strong> sign at the beginning of the code allows us an extra line break, it is optional.</p>
+</blockquote>
+<ul>
+<li>In you <em>body</em> we write <strong>{{ block &ldquo;main&rdquo; . }}{{{ end }}</strong>. This will allow us to pull in content from other templates such as <em>single</em> and <em>list</em>.</li>
+</ul>
+<p>We get the following code:</p>
+<p><img alt="baseof-structure baseof" src="http://localhost:1313/images/devs/how-startup-hugo-site/baseof-result.png"></p>
+<h2 id="customize-the-parshal-in-the-head">Customize the parshal in the head</h2>
+<p>Let&rsquo;s edit the <em>layouts/partials/head/main.html</em> file.</p>
+<ol>
+<li>Plug in the <strong>autometa</strong> file before the <em>title</em> tag, it will help us to fill in the meta if it is not spelled out explicitly on the page. You can learn more about auto-meta at <a href="http://localhost:1313/">link</a>.
+<ul>
+<li>In the <strong>partials/head</strong> folder, create the <strong>autometa.html</strong> file.</li>
+<li>In the <strong>main.html</strong> file, connect it using the following code <strong>{{partial &ldquo;head/autometa.html&rdquo;}}</strong></li>
+</ul>
+</li>
+<li>Connect the <strong>alternate site links</strong> file. You can learn more about alternate links and how to connect them at <a href="http://localhost:1313/">link</a>. The connection algorithm is the same as in <em>item 1</em>.</li>
+<li>Connect the <strong>seo</strong> file containing the main seo content. You can learn more about the seo file at <a href="http://localhost:1313/">link</a>. The connection algorithm is the same as in <em>item 1</em>.</li>
+<li>Connect the <strong>schema</strong> file containing the main json scripts for the <em>schema.org</em> meta. You can learn more about the schema file at <a href="http://localhost:1313/">link</a>. The connection algorithm is the same as in <em>paragraph 1</em>.</li>
+<li>Connect <strong>favicons</strong>. You can learn more about connecting them at <a href="http://localhost:1313/">link</a>. The connection algorithm is the same as in <em>item 1</em>.</li>
+<li>In the <strong>title</strong> tag, call the global variable <strong>$.Scratch.Get &ldquo;title &ldquo;</strong>. If your project does not require an autotitle, you can make a dynamic title using the following code <strong>{{.Title}}</strong></li>
+</ol>
+<p>We get the following structure:</p>
+<p><img alt="head meta" src="http://localhost:1313/images/devs/how-startup-hugo-site/head-meta.png"></p>
+<h3 id="meta-for-pagination-pages">Meta for pagination pages</h3>
+<p>Many projects need to embed navigation links for pagination pages in the head. To do this we use the following code:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>{{- if .Paginator -}}</li><li>{{- if .Paginator.HasPrev -}}}</li><li>&lt;link rel=&#34;prev&#34; href=&#34;{{ .Paginator.Prev.URL | absURL }}&#34;&gt;</li><li>{{- end -}}</li><li>{{- if .Paginator.HasNext -}}</li><li>&lt;link rel=&#34;next&#34; href=&#34;{{ .Paginator.Next.URL | absURL }}&#34;&gt;</li><li>{{- end -}}</li><li>{{- end -}}</li></ol>
+</div><p>You can learn more about how this code works <a href="http://localhost:1313/">here</a>.</p>
+<h3 id="add-the-option-to-close-from-indexing">Add the option to close from indexing</h3>
+<p>Use the following code:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>{{$paginate := false}}</li><li>{{- with .Paginator -}} </li><li>{{- $paginate = ne .PageNumber 1 -}}</li><li>{{- end -}}</li><li>{{- if or (or .Page.Params.noindex $.Site.Params.noindex) ($paginate) -}}</li><li>&lt;meta name=&#39;robots&#39; content=&#39;noindex, nofollow&#39; /&gt;</li><li>{{- else -}}</li><li>&lt;meta name=&#39;robots&#39; content=&#39;index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1&#39; /&gt;</li><li>{{- end -}}</li></ol>
+</div><p>You can learn more about how it works <a href="http://localhost:1313/">here</a></p>
+<h3 id="connect-styles-and-fonts">Connect styles and fonts</h3>
+<p>There are 2 ways to connect directly in head and through site config.</p>
+<h4 id="connecting-directly-in-head">Connecting directly in head</h4>
+<p>To <strong>connect directly</strong> use the following code:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li> &lt;link rel=&#34;stylesheet&#34; href=&#34;{{{`Path_to_file` | absURL}}&#34;&gt;</li></ol>
+</div><ul>
+<li>In the <strong>Path_to_file</strong> field, type the <em>relative</em> path to the css stylesheet file, starting from the root <em>static</em> path</li>
+<li>The <strong>absURL</strong> pip allows you to output this path absolutely taking into account the domain name, which can be specified later.</li>
+</ul>
+<h4 id="where-do-i-put-static-content">Where do I put static content?</h4>
+<p>All images, font files, scripts and styles are placed in the <strong>static</strong> folder in the root of the project. Let&rsquo;s look at an example:</p>
+<p>I need to plug in the <em>main.css</em> file. For better support of the project structure in the future, we will observe the file system hierarchy.</p>
+<ul>
+<li>In the <strong>static</strong> folder create the <strong>css</strong> folder, this is where our styles will be located.</li>
+<li>Put the <em>main.css</em> file into the created folder.</li>
+<li>In the parshall <strong>head/main.html</strong> connect the file <strong><!-- raw HTML omitted --></strong></li>
+</ul>
+<p>Note that you <strong>don&rsquo;t</strong> need** to include the <strong>static</strong> papac in the relative file path.</p>
+<p>Using the direct half-connection in the head, you will need to prescribe each new file as you would with a normal static layout, handling its path as described above. Here&rsquo;s an example of this approach at work:</p>
+<p><img alt="plug styles directly into head" src="http://localhost:1313/images/devs/how-startup-hugo-site/infile-link-connection.png"></p>
+<p>A more universal way would be to use a loop and a configuration file. Let&rsquo;s consider this method below:</p>
+<h4 id="connection-via-site-config">Connection via site config</h4>
+<p>Use the following code:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>{{range .Site.Params.styles}}</li><li>&lt;link rel=&#34;stylesheet&#34; href=&#34;{{ . | absURL}}&#34;&gt;</li><li>{{end}}</li></ol>
+</div><p>Then in the config file we will connect the styles in an array, and they will be pulled into the layout automatically. Read more about configuring the config file below.</p>
+<blockquote>
+<p>If you have several different types of data being connected in the head, you will need to duplicate the loop by replacing the tag inside with the actual tag, and setting a new key for the config parameter.</p>
+</blockquote>
+<p>As an example, let&rsquo;s create a font connection:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>{{range .Site.Params.fonts}}</li><li>&lt;link rel=&#34;preload&#34; href=&#34;{{ . | absURL}}&#34; as=&#34;font&#34; crossorigin=&#34;anonymous&#34;&gt;</li><li>{{end}}</li></ol>
+</div><p>The result is the following:</p>
+<p><img alt="connect fonts and styles in config" src="http://localhost:1313/images/devs/how-startup-hugo-site/fonts.png"></p>
+<h2 id="customize-footer">Customize footer</h2>
+<p>In the <strong>_default/baseof.html</strong> file, we connect the footer. The algorithm is exactly the same as described above. Example of my connection:</p>
+<p><img alt="footer connection" src="http://localhost:1313/images/devs/how-startup-hugo-site/footer-connection.png"></p>
+<p>I didn&rsquo;t create a separate folder for the footer files, since I don&rsquo;t plan to connect much there, so I created the <strong>footer.html</strong> file right in the <strong>partials</strong> folder.</p>
+<p>In the <em>footer</em> file the footer itself will be built later, for now I&rsquo;ll leave it empty, only connect scripts by analogy with styles in the head:</p>
+<p><img alt="connect scripts in footer" src="http://localhost:1313/images/devs/how-startup-hugo-site/scripts.png"></p>
+<h2 id="call-baseof-in-theme-files">Call baseof in theme files</h2>
+<p>For the backbone of the site to be adequately rendered in the theme files, it needs to be called. Let&rsquo;s connect the baseof structure to the base templates <strong>list</strong> and <strong>single</strong>. To do this, use the following code in both files:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>{{ define &#34;main&#34; }}</li><li>{{ HERE_WILL_BE_VERSE</li><li>{{ end}}</li></ol>
+</div><p>Instead of the <strong>THERE_WILL BE_VERSION</strong> marker, put any html code according to your task.</p>
+<h2 id="configure-the-config">Configure the config</h2>
+<p>One last thing worth mentioning is basic config customization. The config is configured in the <strong>config.toml</strong> file in the root of the project. By default we have the following structure created:</p>
+<p><img alt="connect scripts in footer" src="http://localhost:1313/images/devs/how-startup-hugo-site/config-base.png"></p>
+<p>Let&rsquo;s implement a few basic elements</p>
+<h3 id="baseurl">baseURL</h3>
+<p>This parameter is responsible for the domain name of your site. put it there if you know it. If you plan to release to a test domain, specify it.</p>
+<blockquote>
+<p>Be sure to use the https protocol and a closing slash at the end to avoid unnecessary redirects.</p>
+</blockquote>
+<h3 id="languagecode">languageCode</h3>
+<p>Specify the language version of the site</p>
+<h4 id="title">title</h4>
+<p>This is the default title for the entire site. If you use this code in the head, write a common title for all pages (if you don&rsquo;t know, you can just leave empty quotation marks).</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>&lt;title&gt;{{.Title}}&lt;/title&gt;</li></ol>
+</div><p>If you use a parshal with a default meta and the global variable <strong>$.Scratch.Get &ldquo;title &ldquo;</strong>, you can delete this line and customize the default title according to the instructions <a href="http://localhost:1313/">here</a></p>
+<h3 id="defaultcontentlanguage">defaultContentLanguage</h3>
+<p>Add parameter <strong>defaultContentLanguage</strong> for multi-language sites, specify the main language of the site in it. Example:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>defaultContentLanguage = &#34;ru&#34;</li></ol>
+</div><h3 id="disablehugogeneratorinject">disableHugoGeneratorInject</h3>
+<p>Disables the string indicating what the site was created on. <strong>Add mandatory</strong>, set param to <em>true</em>:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>disableHugoGeneratorInject = true</li></ol>
+</div><h3 id="canonifyurls">canonifyURLs</h3>
+<p>Allows to make all urls absolute, enable this parameter:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>canonifyURLs = true</li></ol>
+</div><h2 id="language-options">Language Options</h2>
+<p>Add the following code:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>[languages]</li><li>    [languages.ru]</li><li>        contentDir = &#34;content&#34;</li><li>        languageName = &#34;ru&#34;</li><li>        weight = 1</li></ol>
+</div><ul>
+<li><strong>languageName</strong> - will be displayed in the html tag, in the lang attribute</li>
+<li><strong>contentDir</strong> - specify the path to the content of the corresponding language version, if the language is the same, then specify the path to the content folder.</li>
+<li><strong>weight</strong> - language priority, may be required in a number of cases described in <a href="http://localhost:1313/">article</a> about creating language versions.</li>
+</ul>
+<h2 id="lock-the-site-from-the-index">Lock the site from the index</h2>
+<p>During development on the test site it is necessary to close the site from nindexing, the code implemented above allows you to do this. To close the site globally, in the config we write the following:</p>
+<div class="code_block">
+	<span class="code_copied">Copied</span>
+	<div class="code_copy"><i class="icon-docs"></i></div><ol><li>[params]</li><li></li><li>noindex = true</li></ol>
+</div><p>We get the following basic config file:</p>
+<p><img alt="minimum config settings" src="http://localhost:1313/images/devs/how-startup-hugo-site/config-minimum.png"></p>
+<p>In the course of work with the site you will add more and more new elements, expanding both the config file and the structure of templates. For further work it is recommended to familiarize yourself with the following articles:</p>
+<ul>
+<li><a href="http://localhost:1313/">Creating and customizing the home page file - index.html</a></li>
+<li><a href="http://localhost:1313/">Creating and customizing the default directory file - list.html</a></li>
+<li><a href="http://localhost:1313/">Create and customize default post file - single.html</a></li>
+<li><a href="http://localhost:1313/">Content and work with it</a></li>
+</ul>
+<blockquote>
+<p>You can also find <a href="https://github.com/1cats/wiki">the code for this project</a> on the github repositories.</p>
+</blockquote>
+
+        <div class="recent_posts mobile">
+            <h2>Latest posts</h2>
+            <div class="recent_posts_mobile--inner">
+	            
+	            <div class="recent_post">
+	                <a href="http://localhost:1313/hugo/front-page-setup/">
+	                    <img width="60" height="60" src="http://localhost:1313/images/placeholder.png" alt="Creating a home page">
+	                    <div class="recent_post_content">
+	                        <h3>Creating a home page</h3>
+	                        <p>Home page hierarchy To create a unique layout for the homepage, you need to create a index.html file in the layouts folder. The layout from this file will be displayed on all homepages of all language versions.
+In the absence of this file, the layout is taken from layouts/_default/list.html.
+Layout If using the baseof template, you will need to initialize it first:
+Copied{{ define &#34;main&#34; }}&lt;-- HERE&#39;S THE LAYOUT --&gt;{{end}}If, however, you just output the header and footer into separate parshals, it will be necessary to call them in the template:</p>
+	                    </div>
+	                </a>
+	            </div>
+	            
+	            <div class="recent_post">
+	                <a href="http://localhost:1313/hugo/how-startup-hugo-site/">
+	                    <img width="60" height="60" src="http://localhost:1313/images/placeholder.png" alt="Creating a Project on the Hogo.">
+	                    <div class="recent_post_content">
+	                        <h3>Creating a Project on the Hogo.</h3>
+	                        <p>In this article we will consider how to create a hugo site from scratch, as well as understand the basic steps in creating a standard theme.
+It is important to understand that themes are always created for different projects and needs, so some of the steps in these instructions may be optional, before creating a project you should always carefully read the ToR and discuss all questions and controversial issues with your team leader.</p>
+	                    </div>
+	                </a>
+	            </div>
+	            
+	            <div class="recent_post">
+	                <a href="http://localhost:1313/hugo/kak-zapustit-multilang/">
+	                    <img width="60" height="60" src="http://localhost:1313/images/placeholder.png" alt="How to start a multilang">
+	                    <div class="recent_post_content">
+	                        <h3>How to start a multilang</h3>
+	                        <p>To deploy a multilang site you need:
+In the config. Specify the default language of the site CopieddefaultContentLanguage = &#34;SLAG&#34;Create a languages section and add as many languages as you want there Copied[languages][languages.en]contentDir = &#34;content/en&#34;languageName = &#34;en&#34;[languages.ru]contentDir = &#34;content/en&#34;languageName = &#34;ru&#34;[languages.ua]contentDir = &#34;content/ua&#34;languageName = &#34;ua&#34;languageName - language slug contentDir - path to the folder with language content Translating fields through i18n Create i18n folder in the project root.</p>
+	                    </div>
+	                </a>
+	            </div>
+	            
+	        </div>
+        </div>
+    </div>
+    <aside class="sidebar">
+    <div class="toc_block">
+        <h2>Site navigation</h2>
+        <nav id="TableOfContents">
+  <ol>
+    <li><a href="#deploy-the-project">Deploy the project</a></li>
+    <li><a href="#basic-structure">Basic structure</a></li>
+    <li><a href="#working-with-the-baseof-file">Working with the baseof file</a></li>
+    <li><a href="#customize-the-parshal-in-the-head">Customize the parshal in the head</a>
+      <ol>
+        <li><a href="#meta-for-pagination-pages">Meta for pagination pages</a></li>
+        <li><a href="#add-the-option-to-close-from-indexing">Add the option to close from indexing</a></li>
+        <li><a href="#connect-styles-and-fonts">Connect styles and fonts</a>
+          <ol>
+            <li><a href="#connecting-directly-in-head">Connecting directly in head</a></li>
+            <li><a href="#where-do-i-put-static-content">Where do I put static content?</a></li>
+            <li><a href="#connection-via-site-config">Connection via site config</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a href="#customize-footer">Customize footer</a></li>
+    <li><a href="#call-baseof-in-theme-files">Call baseof in theme files</a></li>
+    <li><a href="#configure-the-config">Configure the config</a>
+      <ol>
+        <li><a href="#baseurl">baseURL</a></li>
+        <li><a href="#languagecode">languageCode</a>
+          <ol>
+            <li><a href="#title">title</a></li>
+          </ol>
+        </li>
+        <li><a href="#defaultcontentlanguage">defaultContentLanguage</a></li>
+        <li><a href="#disablehugogeneratorinject">disableHugoGeneratorInject</a></li>
+        <li><a href="#canonifyurls">canonifyURLs</a></li>
+      </ol>
+    </li>
+    <li><a href="#language-options">Language Options</a></li>
+    <li><a href="#lock-the-site-from-the-index">Lock the site from the index</a></li>
+  </ol>
+</nav>
+    </div>
+    <div class="recent_posts">
+        <h2>Latest posts</h2>
+        
+        <div class="recent_post">
+            <a href="http://localhost:1313/hugo/front-page-setup/">
+                <img width="60" height="60" src="http://localhost:1313/images/placeholder_small.png" alt="Creating a home page">
+                <div class="recent_post_content">
+                    <h3>Creating a home page</h3>
+                    <p>Home page hierarchy To create a unique layout for the homepage, you need to create a index.html file in the layouts folder. The layout from this file will be displayed on all homepages of all language versions.
+In the absence of this file, the layout is taken from layouts/_default/list.html.
+Layout If using the baseof template, you will need to initialize it first:
+Copied{{ define &#34;main&#34; }}&lt;-- HERE&#39;S THE LAYOUT --&gt;{{end}}If, however, you just output the header and footer into separate parshals, it will be necessary to call them in the template:</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="recent_post">
+            <a href="http://localhost:1313/hugo/how-startup-hugo-site/">
+                <img width="60" height="60" src="http://localhost:1313/images/placeholder_small.png" alt="Creating a Project on the Hogo.">
+                <div class="recent_post_content">
+                    <h3>Creating a Project on the Hogo.</h3>
+                    <p>In this article we will consider how to create a hugo site from scratch, as well as understand the basic steps in creating a standard theme.
+It is important to understand that themes are always created for different projects and needs, so some of the steps in these instructions may be optional, before creating a project you should always carefully read the ToR and discuss all questions and controversial issues with your team leader.</p>
+                </div>
+            </a>
+        </div>
+        
+        <div class="recent_post">
+            <a href="http://localhost:1313/hugo/kak-zapustit-multilang/">
+                <img width="60" height="60" src="http://localhost:1313/images/placeholder_small.png" alt="How to start a multilang">
+                <div class="recent_post_content">
+                    <h3>How to start a multilang</h3>
+                    <p>To deploy a multilang site you need:
+In the config. Specify the default language of the site CopieddefaultContentLanguage = &#34;SLAG&#34;Create a languages section and add as many languages as you want there Copied[languages][languages.en]contentDir = &#34;content/en&#34;languageName = &#34;en&#34;[languages.ru]contentDir = &#34;content/en&#34;languageName = &#34;ru&#34;[languages.ua]contentDir = &#34;content/ua&#34;languageName = &#34;ua&#34;languageName - language slug contentDir - path to the folder with language content Translating fields through i18n Create i18n folder in the project root.</p>
+                </div>
+            </a>
+        </div>
+        
+    </div>
+     <div class="search">
+        <form class="desctop__form" action="http://localhost:1313/search/" method="get">
+        <input type="search" name="s" placeholder="Site search" value=""><button class="search_button"><i class="icon-right-open"></i></button></form>
+    </div>
+    <div class="tags_block">
+        <h2>Related tags</h2>
+        
+           
+              
+                <span><a href="http://localhost:1313/tags/baseof/">baseof</a></span>
+              
+           
+              
+                <span><a href="http://localhost:1313/tags/config/">config</a></span>
+              
+           
+              
+                <span><a href="http://localhost:1313/tags/dev/">dev</a></span>
+              
+           
+              
+                <span><a href="http://localhost:1313/tags/hugo/">hugo</a></span>
+              
+           
+              
+                <span><a href="http://localhost:1313/tags/to-start/">to-start</a></span>
+              
+          
+        
+
+    </div>
+</aside>
+</main>
+<footer>
+	<div class="sticky">
+	<div class="to_top"><i class="icon-up-open"></i></div>
+	
+	<div class="navigation">
+		
+		<div class="prev"><a href="http://localhost:1313/hugo/kak-zapustit-multilang/"><i class="icon-left-open"></i> How to start a multilang</a></div>
+		
+		
+		<div class="next"><a href="http://localhost:1313/hugo/front-page-setup/">Creating a home page <i class="icon-right-open"></i></a></div>
+		
+	</div>
+	
+	</div>
+</footer>
+
+<script type="text/javascript" src="http://localhost:1313/js/slider.js" defer="defer"></script>
+
+<script type="text/javascript" src="http://localhost:1313/js/main.js" defer="defer"></script>
+
+<script type="text/javascript" src="http://localhost:1313/js/fuse.js" defer="defer"></script>
+
+<script type="text/javascript" src="http://localhost:1313/js/search.js" defer="defer"></script>
+
+</body>
+</html>

@@ -6,7 +6,7 @@
 {{partial "head/seo.html"}}
 {{partial "head/schema.html"}}
 {{partial "head/favs.html"}}
-{{- if .Paginator -}}
+{{- if and (not .IsPage) .Paginator -}}
 {{- if .Paginator.HasPrev -}}
 <link rel="prev" href="{{ .Paginator.Prev.URL | absURL }}">
 {{- end -}}
@@ -15,8 +15,10 @@
 {{- end -}}
 {{- end -}}
 {{$paginate := false}}
+{{- if not .IsPage -}}
 {{- with .Paginator -}} 
 {{- $paginate = ne .PageNumber 1 -}}
+{{- end -}}
 {{- end -}}
 {{- if or (or .Page.Params.noindex $.Site.Params.noindex) ($paginate) -}}
 <meta name='robots' content='noindex, nofollow' />

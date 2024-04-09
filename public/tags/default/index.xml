@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Default on </title>
+    <link>http://localhost:1313/tags/default/</link>
+    <description>Recent content in Default on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 09 Apr 2024 12:16:53 +0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/default/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/hugo/single-page-setup/</link>
+      <pubDate>Tue, 09 Apr 2024 12:16:53 +0400</pubDate>
+      <guid>http://localhost:1313/hugo/single-page-setup/</guid>
+      <description>All internal pages in hugo are of type single and by default use the single template from the _default folder. Read more about template hierarchy and how to override the default template for a specific page type.&#xA;What content is displayed on pages of type single? All markdown files that are named and stored in the content folder or subfolders will be of type single.&#xA;For example, this article is located in the dev folder and is named single-page-setup.</description>
+    </item>
+  </channel>
+</rss>

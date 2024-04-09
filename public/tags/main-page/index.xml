@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Main-Page on </title>
+    <link>http://localhost:1313/tags/main-page/</link>
+    <description>Recent content in Main-Page on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 09 Apr 2024 12:16:53 +0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/main-page/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/hugo/front-page-setup/</link>
+      <pubDate>Tue, 09 Apr 2024 12:16:53 +0400</pubDate>
+      <guid>http://localhost:1313/hugo/front-page-setup/</guid>
+      <description>Home page hierarchy To create a unique layout for the homepage, you need to create a index.html file in the layouts folder. The layout from this file will be displayed on all homepages of all language versions.&#xA;In the absence of this file, the layout is taken from layouts/_default/list.html.&#xA;Layout If using the baseof template, you will need to initialize it first:&#xA;Copied&#xD;{{ define &amp;#34;main&amp;#34; }}&#xD;&amp;lt;-- HERE&amp;#39;S THE LAYOUT --&amp;gt;&#xD;{{end}}&#xD;If, however, you just output the header and footer into separate parshals, it will be necessary to call them in the template:</description>
+    </item>
+  </channel>
+</rss>
